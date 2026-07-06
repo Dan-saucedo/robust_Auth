@@ -18,11 +18,4 @@ const userSchema = new mongoose.Schema({
   }
 });
 
-// Método helper para verificar si está bloqueado
-userSchema.methods.estaBloqueado = function() {
-  if (!this.bloqueadoHasta) 
-    return false;
-  return new Date() < this.bloqueadoHasta;
-};
-
 export default mongoose.model('User', userSchema);
