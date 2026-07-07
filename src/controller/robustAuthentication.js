@@ -54,7 +54,7 @@ export const loginUser = async (req, res) => {
     if (user.password !== password) {
       user.intentosFallidos = (user.intentosFallidos || 0) + 1;
 
-      if (user.intentosFallidos >= 3) {
+      if (user.intentosFallidos >= 5) {
         user.bloqueadoHasta = new Date(Date.now() + 15 * 60 * 1000);
       }
 
