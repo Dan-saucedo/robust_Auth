@@ -16,8 +16,8 @@ app.get('/', async(req, res) => {
     });
 });
 
-app.use('/api/products', securityMiddleware, productsRoute );
-app.use('/api/users', securityMiddleware, usersRoute);
+app.use('/api', securityMiddleware);
+app.use('/api', securityMiddleware);
 app.use(express.json());
 app.use(helmet());
 
