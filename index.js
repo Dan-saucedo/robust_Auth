@@ -3,9 +3,8 @@ import mongoose, { mongo } from 'mongoose';
 import helmet from 'helmet';
 import 'dotenv/config';
 import { securityMiddleware } from './src/middleware/middleware.js';
-import usersRoute from '../main_project/src/routes/usersRoute.js';
-import productsRoute from '../main_project/src/routes/productsRoute.js';
-//import MONGO_URI from 'dotenv';
+//import usersRoute from '../main_project/src/routes/usersRoute.js';
+//import productsRoute from '../main_project/src/routes/productsRoute.js';
 
 const app = express();
 const PORT = process.env.PORT || 5100;
