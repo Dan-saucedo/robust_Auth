@@ -7,8 +7,9 @@ const router = express.Router();
 //RUTAS PÚBLICAS
 router.post('/register', registerUser);
 router.post('/login', loginUser);
-// 2. RUTAS PROTEGIDAS (Con verifyToken)
-router.get('/users', verifyToken, getUsers);
+
+// Rutas protegidas
+router.get('/', verifyToken, getUsers);
 router.put('/:id', verifyToken, updateUser);
 
 //En el caso de DELETE no solamente es borrar el usuario y ya
