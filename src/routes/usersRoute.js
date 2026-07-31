@@ -9,7 +9,7 @@ router.post('/register', registerUser);
 router.post('/login', loginUser);
 
 // Rutas protegidas
-router.get('/users', verifyToken, getUsers);
+router.get('/', verifyToken, getUsers);
 router.put('/:id', verifyToken, updateUser);
 router.delete('/:id', verifyToken, deleteUser);
 //En el caso de DELETE no solamente es borrar el usuario y ya
